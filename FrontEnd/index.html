@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,600,700">
+  
+  <title>Url Shortener</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root {
+      /*### Primary*/
+      --blue: hsl(223, 87%, 63%);
+      /*### Secondary*/
+      --pale-blue: hsl(223, 100%, 88%);
+      --light-red: hsl(354, 100%, 66%);
+      /*### Neutral*/
+      --gray: hsl(0, 0%, 59%);
+      --very-dark-blue: hsl(209, 33%, 12%);
+    }
+    html, button, input {
+      font-size: 20px;
+      font-family: 'Libre Franklin';
+    }
+    body {
+      min-height: 90vh;
+    }
+    body, main, footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .heading {
+      font-size: 1rem;
+    }
+    .heading > span {
+      color: var(--blue);
+    }
+    .title {
+      font-size: 1.25rem;
+      margin: 0;
+      color: var(--gray);
+    }
+    .title > span {
+      font-weight: 700;
+      color: var(--very-dark-blue);
+    }
+    .sub__title {
+      margin: 0;
+    }
+    .notify__form {
+      margin: 2rem;
+      box-sizing: border-box;
+      display: grid;
+      grid-auto-flow: row;
+      grid-template-columns: 25%;
+      grid-template-areas: 
+        'a a a b'
+        'c c c c';
+      gap: 0 1rem;
+      min-width: 50vw;
+    }
+    .a {
+      grid-area: a;
+    }
+    .b {
+      grid-area: b;
+    }
+    .c {
+      grid-area: c;
+    }
+    .input__box{
+      height: 100%;
+      font-size: 0.75rem;
+      height: 2rem;
+      border-radius: 3rem;
+      border: 1px solid lightgray;
+      padding: 0 1.5rem;
+    }
+    .input__box::placeholder {
+      color: var(--gray);
+    }
+    .input__box:focus {
+      outline: none;
+    }
+    .submit__button {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: white;
+      background-color: var(--very-dark-blue);
+      border: none;
+      border-radius: 3rem;
+      letter-spacing: 1px;
+    }
+    .submit__button:hover {
+      background-color: white;
+      box-shadow: inset 0 0 0 1px var(--very-dark-blue);
+      color: var(--very-dark-blue);
+      cursor: pointer;
+    }
+    .invalid {
+      border: 1px solid var(--light-red);
+    }
+    .error__message {
+      color: var(--light-red);
+      font-size: 0.6rem;
+      padding: 0 1.5rem;
+      margin: 0.25rem 0;
+    }
+    .demo__img {
+      max-height: 50vh;
+    }
+    .social__media {
+      margin: 0;
+      padding: 0;
+      color: var(--blue);
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      /*width: 5rem;*/
+    }
+    .social__media > li {
+      padding: 0.2rem;
+      box-shadow: inset 0 0 0 1px lightgray;
+      border-radius: 1rem;
+      text-align: center;
+      vertical-align: middle;
+      height: 1rem;
+      width: 1rem;
+      line-height: 0.9rem;
+    } 
+    .social__media > li > a {
+      color: black;
+      font-size: 0.7rem;
+    }
+    .social__media > li:hover a {
+      color: white !important;
+    }
+    .social__media > li:hover {
+      background-color: black;
+      cursor: pointer;
+      box-shadow: none;
+    }
+    .copyright {
+      font-size: 0.6rem;
+      color: var(--gray);
+    }
+    footer {
+      margin-top: 2rem;
+    }
+    @media only screen and (max-width: 600px) {
+      .title {
+        font-size: 1.25rem;
+      }
+      .sub__title {
+        font-size: 0.75rem;
+      }
+      .notify__form {
+        width: 80%;
+        grid-template-areas: 
+          'a'
+          'c'
+          'b';
+        grid-template-columns: 100%;
+      }
+      .error__message {
+        text-align: center;
+        white-space: nowrap;
+      }
+      .submit__button {
+        height: 2rem;
+      }
+      .demo__img {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="heading">Minify url<span>.</span></h1>
+  </header>
+  <main>
+    <p class="title">Paste the URL to <span>shorten!</span></p>
+    <form class="notify__form">
+      <input class="input__box a" type="Url" name="email" placeholder="Enter the url..." oninput="validateEmail(event)">
+      <button class="submit__button b" type="submit"><i class="fa-solid fa-minimize"></i></button>
+      <p class="error__message c" id="errorMessage">&nbsp;</p>
+    </form>
+    <img class="demo__img" src="./images/illustration-dashboard.png" alt="illustration-dashboard">
+  </main>
+  <footer>
+    <ul class="social__media">
+      <!-- <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li> -->
+      <!-- <li><a href=""><i class="fa-brands fa-twitter"></i></a></li> -->
+      <li><a href=""><i class="fa-brands fa-github"></i></a></li>
+    </ul>
+    <p class="copyright">&copy; Copyright URL Shortener. All rights reserved.</p>
+  </footer>
+  <script>
+    function validateEmail(event) {
+      const email = event.target.value;
+      const pattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+      const errorMessage = document.getElementById('errorMessage');
+      if(email == '' || email == null) {
+        errorMessage.innerHTML = 'Whoops! It looks like you forgot to add your email';
+        return;
+      }
+      if(!pattern.test(email)) {
+        errorMessage.innerHTML = 'Please provide a valid email address.';
+      }
+      else {
+        errorMessage.innerHTML = '';
+      }
+    }
+  </script>
+  <script src="https://kit.fontawesome.com/862bd05429.js" crossorigin="anonymous"></script>
+</body>
+</html>
