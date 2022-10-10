@@ -19,8 +19,9 @@
   <main>
     <p class="title">Paste the URL to <span>shorten!</span></p>
     <form class="notify__form">
+      <p class="original__url o" id="originalUrlParent"><span>Original Url:&nbsp;</span><span id="originalUrl"></span></p>
       <input class="input__box a" id="urlInput" type="Url" name="url" placeholder="Enter the url..." oninput="validateUrl(event)">
-      <button class="submit__button b" type="submit"><i class="fa-solid fa-minimize"></i></button>
+      <button class="submit__button b" type="submit" onclick="shortenUrl(event)"><i class="fa-solid fa-minimize"></i></button>
       <p class="error__message c" id="errorMessage">&nbsp;</p>
     </form>
     <img class="demo__img" src="https://foreignpolicyi.org/wp-content/uploads/2021/09/movie-video-compressor.jpg" alt="illustration-dashboard">
