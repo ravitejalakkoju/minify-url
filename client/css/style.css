@@ -2,11 +2,14 @@
   /*### Primary*/
   --blue: hsl(223, 87%, 53%);
   /*### Secondary*/
-  --pale-blue: hsl(223, 100%, 88%);
   --light-red: hsl(354, 100%, 66%);
   /*### Neutral*/
   --gray: hsl(0, 0%, 59%);
   --very-dark-blue: hsl(209, 33%, 12%);
+  /*### social media links*/
+  --facebook: hsl(214, 89%, 52%);
+  --twitter: hsl(203, 89%, 53%);
+  --google: hsl(5, 81%, 56%);
 }
 html, button, input {
   font-size: 20px;
@@ -24,8 +27,28 @@ body, main, footer {
 .heading {
   font-size: 1rem;
 }
-.heading > span {
+.heading > span:first-child {
   color: var(--blue);
+}
+.settings > i, .user > i{
+  margin-left: 0.25rem;
+  transition: 1.0s ease all;
+  cursor: pointer;
+}
+.settings > i:hover, .user > i:hover {
+  color: var(--blue);
+}
+.settings > i:hover {
+  transform               : rotate(180deg);
+  -moz-transform          : rotate(180deg);
+  -webkit-transform       : rotate(180deg);
+  transform-origin        : center;
+  -moz-transform-origin   : center;
+  -webkit-transform-origin: center;
+
+  transition              : transform 1.0s ease all;
+  -moz-transition         : -moz-transform 1.0s ease all;
+  -webkit-transition      : -webkit-transform 1.0s ease all;
 }
 .title {
   font-size: 1.25rem;
@@ -52,13 +75,23 @@ body, main, footer {
   gap: 0 1rem;
   min-width: 50vw;
 }
-.original__url {
+.minified__url {
   font-size: 0.65rem;
   margin: 0 0 0.25rem 1.5rem;
   display: none;
 }
-.original__url > span:first-child {
+.minified__url > span:first-child {
   font-weight: 700;
+}
+.minified__url > a {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+.minified__url > i {
+  margin-left: 0.25rem;
+  color: var(--gray);
+  cursor: pointer;
 }
 .o {
   grid-area: o;
@@ -150,6 +183,9 @@ body, main, footer {
 footer {
   margin-top: 2rem;
 }
+.d-none {
+  display: none !important;
+}
 @media only screen and (max-width: 600px) {
   .title {
     font-size: 1.25rem;
@@ -166,7 +202,7 @@ footer {
       'b';
     grid-template-columns: 100%;
   }
-  .original__url {
+  .minified__url {
     text-align: center;
     margin: 0 0 0.25rem 0;
   }

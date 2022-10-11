@@ -1,0 +1,48 @@
+.login__form {
+}
+.login__form__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.login__form__social-media {
+  display: flex;
+  flex-direction: column;
+}
+.login__form__social-link {
+  padding: 0.5rem 2rem;
+  border-radius: 2rem;
+  font-size: 0.65rem;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+.login__form__social-link > i {
+  margin-right: 0.5rem;
+}
+.login__form__social-link_fb {
+  background-color: var(--facebook);
+  box-shadow: inset 0 0 0 1px var(--facebook);
+}
+.login__form__social-link_tw {
+  background-color: var(--twitter);
+  box-shadow: inset 0 0 0 1px var(--twitter);
+}
+.login__form__social-link_google {
+  background-color: var(--google);
+  box-shadow: inset 0 0 0 1px var(--google);
+}
+.login__form__social-link:hover {
+  background-color: white;
+}
+.login__form__social-link_fb:hover {
+  color: var(--facebook);
+}
+.login__form__social-link_tw:hover {
+  color: var(--twitter);
+}
+.login__form__social-link_google:hover {
+  color: var(--google);
+}

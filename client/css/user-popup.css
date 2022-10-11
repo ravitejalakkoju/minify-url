@@ -1,0 +1,42 @@
+header {
+  position: relative;
+}
+.user > i {
+  color: var(--blue);
+}
+.user:after{
+    content:'';
+    display:block;
+    width:0;
+    height:0;
+    position:absolute;
+
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom:10px solid lightgray;
+
+    bottom: 0;
+    right: -2px;
+    display: none;
+}
+.user__popup {
+  position: absolute;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 0 5px lightgray;
+  border-radius: 0.25rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 30vw;
+  min-height: 50vh;
+}
+
+@media only screen and (max-width: 600px) {
+  .user__popup {
+    max-width: 90vw;
+  }
+
+}
