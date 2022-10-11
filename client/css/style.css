@@ -159,11 +159,16 @@ footer {
   }
   .notify__form {
     width: 80%;
-    grid-template-areas: 
+    grid-template-areas:
+      'o' 
       'a'
       'c'
       'b';
     grid-template-columns: 100%;
+  }
+  .original__url {
+    text-align: center;
+    margin: 0 0 0.25rem 0;
   }
   .error__message {
     text-align: center;
