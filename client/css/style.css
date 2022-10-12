@@ -5,6 +5,7 @@
   --light-red: hsl(354, 100%, 66%);
   /*### Neutral*/
   --gray: hsl(0, 0%, 59%);
+  --very-light-blue: hsl(212, 43%, 98%);
   --very-dark-blue: hsl(209, 33%, 12%);
   /*### social media links*/
   --facebook: hsl(214, 89%, 52%);
@@ -12,6 +13,9 @@
   --google: hsl(5, 81%, 56%);
   /*variables*/
   --popup-open: none;
+  /*### link status colors*/
+  --available: hsl(142, 69%, 54%);
+  --expired: hsl(0, 90%, 66%);
 }
 html, button, input {
   font-size: 20px;
@@ -31,26 +35,6 @@ body, main, footer {
 }
 .heading > span:first-child {
   color: var(--blue);
-}
-.settings > i, .user > i{
-  margin-left: 0.25rem;
-  transition: 1.0s ease all;
-  cursor: pointer;
-}
-.settings > i:hover, .user > i:hover {
-  color: var(--blue);
-}
-.settings > i:hover {
-  transform               : rotate(180deg);
-  -moz-transform          : rotate(180deg);
-  -webkit-transform       : rotate(180deg);
-  transform-origin        : center;
-  -moz-transform-origin   : center;
-  -webkit-transform-origin: center;
-
-  transition              : transform 1.0s ease all;
-  -moz-transition         : -moz-transform 1.0s ease all;
-  -webkit-transition      : -webkit-transform 1.0s ease all;
 }
 .title {
   font-size: 1.25rem;

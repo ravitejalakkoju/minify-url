@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/user-popup.css">
   <link rel="stylesheet" href="./css/user-login.css">
+  <link rel="stylesheet" href="./css/user-settings.css">
   
   <title>Url Shortener</title>
 
@@ -17,15 +18,15 @@
 <body>
   <header>
     <h1 class="heading">Minify url<span>.</span>
-      <button class="user" onclick="openUserPopup()">
-        <!-- <span class="settings"><i class="fa-solid fa-gear"></i></span> -->
+      <button class="user" onclick="toggleUserPopup()">
+        <span class="settings d-none" id="settings"><i class="fa-solid fa-gear" id="settingsIcon"></i></span>
         <i class="fa-regular fa-user" id="userIcon"></i>
       </button>
     </h1>
     <!--  d-none -->
     <div class="user__popup d-none" id="userPopup">
-      <div class="user__login">
-        <form class="login__form">
+      <div class="user__login" id="loginPopup">
+        <form class="login__form" onsubmit="return false">
           <ul class="social__media">
             <li class="facebook">
               <a href="#">
@@ -54,11 +55,60 @@
             <a class="login__form__link" href="#">Sign up</a>
             <a class="login__form__link" href="#">Forgot password?</a>
           </div>
-          <input class="login__form__submit__btn" type="submit" value="Login"/>
+          <input class="login__form__submit__btn" type="submit" value="Login" onclick="login(event)" />
         </form>
       </div>
-      <div class="user__settings">
-        
+      <div class="user__settings d-none" id="settingsPopup">
+          <table>
+            <tr class="table__header">
+              <th class="status">Status</th>
+              <th class="link">Minified URL</th>
+              <th>Created Date</th>
+              <th>Expiry Date</th>
+            </tr>
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle available"></i></td>
+              <td class="link">mini.fy/abcdef<i class="fa-regular fa-copy"></i></td>
+              <td>12 October 2022</td>
+              <td>17 October 2022</td>
+            </tr>
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle available"></i></td>
+              <td class="link">mini.fy/abcdef<i class="fa-regular fa-copy"></i></td>
+              <td >12 October 2022</td>
+              <td>17 October 2022</td>
+            </tr>
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle available"></i></td>
+              <td class="link">mini.fy/abcdef<i class="fa-regular fa-copy"></i></td>
+              <td>12 October 2022</td>
+              <td>17 October 2022</td>
+            </tr>
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle available"></i></td>
+              <td class="link">mini.fy/abcdef<i class="fa-regular fa-copy"></i></td>
+              <td>12 October 2022</td>
+              <td>17 October 2022</td>
+            </tr>
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle expired"></i></td>
+              <td class="link" style="user-select: none;">mini.fy/abcdef<i class="fa-regular fa-copy d-none"></i></td>
+              <td>16 October 2022</td>
+              <td>11 October 2022</td>
+            </tr class="data">
+
+            <tr class="table__data">
+              <td class="status"><i class="fa-solid fa-circle expired"></i></td>
+              <td class="link" style="user-select: none;">mini.fy/abcdef<i class="fa-regular fa-copy d-none"></i></td>
+              <td>6 October 2022</td>
+              <td>11 October 2022</td>
+            </tr>
+          </table>
       </div>
     </div>
   </header>

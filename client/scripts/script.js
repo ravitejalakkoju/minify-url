@@ -27,11 +27,28 @@ function shortenUrl(event) {
   minifiedUrlParent.style.display = 'block';
 }
 
-function openUserPopup() {
+var isLoggedIn = false;
+
+function login(event) {
+  isLoggedIn = true;
+  toggleUserPopup(true);
+}
+
+function toggleUserPopup(isChange = false) {
   const userPopup = document.getElementById('userPopup');
-  userPopup.classList.toggle('d-none');
-  const isOpen = userPopup.classList.value.includes('none');
-  document.getElementById('userIcon').classList.remove(!isOpen ? 'fa-regular' : 'fa-solid');
-  document.getElementById('userIcon').classList.add(!isOpen ? 'fa-solid' : 'fa-regular');
-  document.querySelector(':root').style.setProperty('--popup-open', !isOpen ? 'block' : 'none');
+  if(!isChange) userPopup.classList.toggle('d-none');
+  const isOpen = !userPopup.classList.value.includes('d-none');
+  if(!isLoggedIn) {
+    document.getElementById('userIcon').classList.remove(isOpen ? 'fa-regular' : 'fa-solid');
+    document.getElementById('userIcon').classList.add(isOpen ? 'fa-solid' : 'fa-regular');
+  }
+  else {
+    document.getElementById('loginPopup').classList.add('d-none');
+    document.getElementById('settings').classList.remove('d-none');
+    document.getElementById('userIcon').classList.add('d-none');
+    document.getElementById('settingsPopup').classList.remove('d-none');
+    document.getElementById('settingsIcon').style.color = isOpen ? 'var(--blue)' : 'black';
+  }
+  document.querySelector(':root').style.setProperty('--popup-open', isOpen ? 'block' : 'none');
+
 }
