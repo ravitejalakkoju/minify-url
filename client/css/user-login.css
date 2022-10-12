@@ -10,13 +10,20 @@
 }
 .login__form__input {
   width: 100%;
+  margin-bottom: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+  color: lightgray;
+}
+.login__form__input > i {
+  margin-left: 0.5rem;
 }
 .login__form__input > input{
   border: none;
-  border-bottom: 1px solid lightgray;
   font-size: 0.95em !important;
   padding: 0.25rem 0.75rem;
-  margin-bottom: 0.25rem;
   width: 100%;
   box-sizing: border-box;
 }
@@ -28,7 +35,6 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding-left: 0.75rem;
   box-sizing: border-box;
 }
 .login__form__links > a{
