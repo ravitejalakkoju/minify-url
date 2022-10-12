@@ -4,6 +4,11 @@ header {
 .user > i {
   color: var(--blue);
 }
+button.user {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
 .user:after{
     content:'';
     display:block;
