@@ -30,5 +30,8 @@ function shortenUrl(event) {
 function openUserPopup() {
   const userPopup = document.getElementById('userPopup');
   userPopup.classList.toggle('d-none');
-  document.querySelector(':root').style.setProperty('--popup-open', !userPopup.classList.value.includes('none') ? 'block' : 'none');
+  const isOpen = userPopup.classList.value.includes('none');
+  document.getElementById('userIcon').classList.remove(!isOpen ? 'fa-regular' : 'fa-solid');
+  document.getElementById('userIcon').classList.add(!isOpen ? 'fa-solid' : 'fa-regular');
+  document.querySelector(':root').style.setProperty('--popup-open', !isOpen ? 'block' : 'none');
 }
