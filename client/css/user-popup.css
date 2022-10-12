@@ -63,6 +63,14 @@ button.user {
   max-height: 75vh;
 }
 
+.user__popup .icon {
+  position: absolute; 
+  right: 0; top: 0; 
+  margin: 1rem; 
+  font-size: 0.75rem; 
+  color: lightgray;
+}
+
 @media only screen and (max-width: 600px) {
   .user__popup {
     width: 80vw;
