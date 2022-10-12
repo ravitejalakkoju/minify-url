@@ -50,5 +50,4 @@ function toggleUserPopup(isChange = false) {
     document.getElementById('settingsIcon').style.color = isOpen ? 'var(--blue)' : 'black';
   }
   document.querySelector(':root').style.setProperty('--popup-open', isOpen ? 'block' : 'none');
-
 }
