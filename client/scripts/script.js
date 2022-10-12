@@ -47,7 +47,9 @@ function toggleUserPopup(isChange = false) {
     document.getElementById('settings').classList.remove('d-none');
     document.getElementById('userIcon').classList.add('d-none');
     document.getElementById('settingsPopup').classList.remove('d-none');
-    document.getElementById('settingsIcon').style.color = isOpen ? 'var(--blue)' : 'black';
+    setTimeout(function() {
+      document.getElementById('settingsIcon').classList.toggle('rotate');  
+    }, 0);
   }
   document.querySelector(':root').style.setProperty('--popup-open', isOpen ? 'block' : 'none');
 }
