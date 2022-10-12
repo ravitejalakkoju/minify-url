@@ -10,6 +10,8 @@
   --facebook: hsl(214, 89%, 52%);
   --twitter: hsl(203, 89%, 53%);
   --google: hsl(5, 81%, 56%);
+  /*variables*/
+  --popup-open: none;
 }
 html, button, input {
   font-size: 20px;
@@ -162,7 +164,7 @@ body, main, footer {
   vertical-align: middle;
   height: 1rem;
   width: 1rem;
-  line-height: 0.9rem;
+  line-height: 0.8rem;
 } 
 .social__media > li > a {
   color: black;

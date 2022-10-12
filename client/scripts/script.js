@@ -28,5 +28,7 @@ function shortenUrl(event) {
 }
 
 function openUserPopup() {
-  document.getElementById('userPopup').classList.toggle('d-none');
+  const userPopup = document.getElementById('userPopup');
+  userPopup.classList.toggle('d-none');
+  document.querySelector(':root').style.setProperty('--popup-open', !userPopup.classList.value.includes('none') ? 'block' : 'none');
 }

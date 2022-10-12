@@ -1,48 +1,108 @@
-.login__form {
+.user__login {
+  min-width: 70%;
+  width: 70%;
+  font-size: 0.75rem;
 }
-.login__form__body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.login__form {
+  display: grid;
+  grid-gap: 0.25rem;
+  justify-items: center;
+}
+.login__form__input {
   width: 100%;
 }
-.login__form__social-media {
+.login__form__input > input{
+  border: none;
+  border-bottom: 1px solid lightgray;
+  font-size: 0.95em !important;
+  padding: 0.25rem 0.75rem;
+  margin-bottom: 0.25rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+.login__form__input > input:focus {
+  outline: none;
+}
+.login__form__links {
+  font-size: 0.75em;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 0.75rem;
+  box-sizing: border-box;
 }
-.login__form__social-link {
-  padding: 0.5rem 2rem;
-  border-radius: 2rem;
-  font-size: 0.65rem;
+.login__form__links > a{
+  color: slateblue;
   text-decoration: none;
+}
+.login__form__links > a:hover{
+  text-decoration: underline;
+}
+.login__form__submit__btn {
+  font-size: 0.95em !important;
+  padding: 0.4rem;
+  border-radius: 2rem;
+  border: none;
   color: white;
-  margin-bottom: 0.5rem;
+  background-color: var(--blue);
+  letter-spacing: 1px;
+  min-width:40%;
+  margin-top: 1rem;
 }
-.login__form__social-link > i {
-  margin-right: 0.5rem;
-}
-.login__form__social-link_fb {
-  background-color: var(--facebook);
-  box-shadow: inset 0 0 0 1px var(--facebook);
-}
-.login__form__social-link_tw {
-  background-color: var(--twitter);
-  box-shadow: inset 0 0 0 1px var(--twitter);
-}
-.login__form__social-link_google {
-  background-color: var(--google);
-  box-shadow: inset 0 0 0 1px var(--google);
-}
-.login__form__social-link:hover {
+.login__form__submit__btn:hover {
   background-color: white;
+  box-shadow: inset 0 0 0 1px var(--blue);
+  color: var(--blue);
+  cursor: pointer;
+  font-weight: 700;
 }
-.login__form__social-link_fb:hover {
-  color: var(--facebook);
+.or__divider {
+  text-align: center;
 }
-.login__form__social-link_tw:hover {
-  color: var(--twitter);
+.or__divider {
+  font-size: 0.75em;
+  color: var(--gray);
 }
-.login__form__social-link_google:hover {
-  color: var(--google);
+.login__form > .social__media {
+  width: 6rem;
+  align-items: center;
+}
+.login__form > .social__media > li {
+  line-height: 1rem;
+  box-shadow: none;
+}
+.login__form > .social__media > li > a{
+  color: white !important;
+}
+.login__form > .social__media > li.facebook {
+  background-color: var(--facebook);
+} 
+.login__form > .social__media > li.twitter {
+  background-color: var(--twitter);
+} 
+.login__form > .social__media > li.google{
+  background-color: var(--google);
+}
+.login__form > .social__media > li:hover {
+  background-color: white;
+  box-shadow: inset 0 0 0 1px lightgray;
+}
+.login__form > .social__media > li.facebook:hover a {
+  color: var(--facebook) !important;
+} 
+.login__form > .social__media > li.twitter:hover a{
+  color: var(--twitter) !important;
+} 
+.login__form > .social__media > li.google:hover a {
+  color: var(--google) !important;
+}
+.social__media > li:hover {
+  background-color: black;
+  cursor: pointer;
+  box-shadow: none;
+}
+@media only screen and (max-width: 600px) {
+  .user__login {
+    width: 90%;
+  }
 }

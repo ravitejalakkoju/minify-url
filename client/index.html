@@ -20,23 +20,39 @@
       <!-- <span class="settings"><i class="fa-solid fa-gear"></i></span> -->
       <span class="user" onclick="openUserPopup()"><i class="fa-regular fa-user"></i></span>
     </h1>
+    <!--  d-none -->
     <div class="user__popup d-none" id="userPopup">
       <div class="user__login">
         <form class="login__form">
-          <div class="login__form__body">
-            <div class="login__form__manually">
-              <input class="login__form__input" type="text" placeholder="Username" name="uname" required="required"/>
-              <input class="login__form__input" type="password" placeholder="Password" name="psw" required="required"/>
-              <input class="primary-button primary-button_green" type="submit" value="Login"/>
-            </div>
-            <div class="login__form__footer"><a class="login__form__link" href="#">Sign up</a><a class="login__form__link" href="#">Forgot password?</a></div>
-            <div class="vl login__form__vl"><span class="vl__word">or</span></div>
-            <div class="login__form__social-media">
-              <a class="login__form__social-link login__form__social-link_fb" href="#"><i class="fa-brands fa-facebook-f"></i>Login with Facebook</a>
-              <a class="login__form__social-link login__form__social-link_tw" href="#"><i class="fa-brands fa-twitter"></i>Login with Twitter</a>
-              <a class="login__form__social-link login__form__social-link_google" href="#"><i class="fa-brands fa-google"></i>Login with Google+</a>
-            </div>
+          <ul class="social__media">
+            <li class="facebook">
+              <a href="#">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="twitter">
+              <a href="#">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </li>
+            <li class="google">
+              <a href="#">
+                <i class="fa-brands fa-google"></i>
+              </a>
+            </li>
+          </ul>
+          <p class="or__divider">or use your email address</p>
+          <div class="login__form__input">
+            <input type="text" placeholder="Username" name="uname" required="required"/>
           </div>
+          <div class="login__form__input">
+            <input type="password" placeholder="Password" name="psw" required="required"/>
+          </div>
+          <div class="login__form__links">
+            <a class="login__form__link" href="#">Sign up</a>
+            <a class="login__form__link" href="#">Forgot password?</a>
+          </div>
+          <input class="login__form__submit__btn" type="submit" value="Login"/>
         </form>
       </div>
       <div class="user__settings">
