@@ -1,0 +1,35 @@
+{
+  "name": "minify-url",
+  "version": "1.0.0",
+  "description": "Shorten the URL's and share the mini links. Control the availability and expiration of the URL's",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ravitejalakkoju/minify-url.git"
+  },
+  "keywords": [
+    "url",
+    "shortener",
+    "minify",
+    "url",
+    "shorten",
+    "url",
+    "url-shortener",
+    "minify-url",
+    "share",
+    "url",
+    "mini",
+    "url",
+    "url",
+    "links"
+  ],
+  "author": "L N S S Ravi Teja",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ravitejalakkoju/minify-url/issues"
+  },
+  "homepage": "https://github.com/ravitejalakkoju/minify-url#readme"
+}
