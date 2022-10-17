@@ -31,5 +31,11 @@
   "bugs": {
     "url": "https://github.com/ravitejalakkoju/minify-url/issues"
   },
-  "homepage": "https://github.com/ravitejalakkoju/minify-url#readme"
+  "homepage": "https://github.com/ravitejalakkoju/minify-url#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.6.5",
+    "shortid": "^2.2.16",
+    "valid-url": "^1.0.9"
+  }
 }
