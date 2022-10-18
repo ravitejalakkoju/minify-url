@@ -79,6 +79,17 @@ body, main, footer {
   color: var(--gray);
   cursor: pointer;
 }
+.fa-copy:hover {
+  color: var(--blue);
+}
+#copiedIcon, .copied__ack{
+  display: none;
+  color: green;
+}
+.copied__ack {
+  font-size: 0.8em;
+  font-weight: 600;
+}
 .o {
   grid-area: o;
 }

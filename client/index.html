@@ -15,10 +15,10 @@
 <body>
   <header>
     <h1 class="heading">Minify url<span>.</span>
-      <button class="user" onclick="toggleUserPopup()">
+      <!-- <button class="user" onclick="toggleUserPopup()">
         <span class="settings d-none" id="settings"><i class="fa-solid fa-gear" id="settingsIcon"></i></span>
         <i class="fa-regular fa-user" id="userIcon"></i>
-      </button>
+      </button> -->
     </h1>
     <!--  d-none -->
     <div class="user__popup d-none" id="userPopup">
@@ -284,12 +284,17 @@
   <main>
     <p class="title">Paste the URL to <span>shorten!</span></p>
     <form class="notify__form">
-      <p class="minified__url o" id="minifiedUrlParent"><span>Minified Url:&nbsp;</span><a href="mini.fy/abcdef" id="minifiedUrl"></a><i class="fa-regular fa-copy"></i><i class="fa-solid fa-check"></i></p>
+      <p class="minified__url o" id="minifiedUrlParent">
+        <span>Minified Url:&nbsp;</span><a href="#" id="minifiedUrl" target="_blank"></a>
+        <i class="fa-regular fa-copy" id="copyLink" onclick="copyUrl('minifiedUrl')"></i>
+        <i class="fa-solid fa-check" id="copiedIcon"></i>
+        <span class="copied__ack" id="copied">Copied!</span>
+      </p>
       <input class="input__box a" id="urlInput" type="Url" name="url" placeholder="Enter the url..." oninput="validateUrl(event)">
-      <button class="submit__button b" type="submit" onclick="shortenUrl(event)"><i class="fa-solid fa-minimize"></i></button>
+      <button class="submit__button b" type="submit" onclick="shortenUrl()"><i class="fa-solid fa-minimize"></i></button>
       <p class="error__message c" id="errorMessage">&nbsp;</p>
     </form>
-    <img class="demo__img" src="./images/minify-url-illustration.png" alt="illustration-dashboard">
+    <img class="demo__img" src="./images/minify-url-illustration.png" alt="minify-url-illustration">
   </main>
   <footer>
     <ul class="social__media">
@@ -299,5 +304,6 @@
   </footer>
   <script src="./scripts/script.js"></script>
   <script src="https://kit.fontawesome.com/862bd05429.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 </html>

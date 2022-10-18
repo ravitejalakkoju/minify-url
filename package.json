@@ -4,7 +4,8 @@
   "description": "Shorten the URL's and share the mini links. Control the availability and expiration of the URL's",
   "main": "server.js",
   "scripts": {
-    "test": "node server"
+    "test": "node server",
+    "start": "node server"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,7 @@
   },
   "homepage": "https://github.com/ravitejalakkoju/minify-url#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2",
     "mongoose": "^6.6.5",
     "shortid": "^2.2.16",

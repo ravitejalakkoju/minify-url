@@ -2,7 +2,7 @@
 const mongoose = require('mongoose')
 
 // declare a Database string URI
-const DB_URI = 'mongodb://localhost:27017/minifyurl'
+const DB_URI = 'mongodb+srv://krishna:janmastami@cluster0.np71g.mongodb.net/?retryWrites=true&w=majority'
 
 // establishing a database connection
 mongoose.connect(DB_URI, {
