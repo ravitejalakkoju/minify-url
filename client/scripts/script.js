@@ -30,7 +30,7 @@ function shortenUrl() {
   const minifiedUrl = document.getElementById('minifiedUrl');
   const urlInput = document.getElementById('urlInput');
   const minifiedUrlParent = document.getElementById('minifiedUrlParent');
-  axios.post('http://localhost:5000/api/url/shorten', {longUrl: urlInput.value})
+  axios.post('https://mini7fy.herokuapp.com/api/url/shorten', {longUrl: urlInput.value})
   .then(response => {
     if(isUrlValid) {
       minifiedUrl.innerHTML = response.data.shortUrl;
