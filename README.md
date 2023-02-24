@@ -1,5 +1,7 @@
 ## Minify-URL
 
+###### Figma Design Link: [Figma Design Screen](https://www.figma.com/file/2o3RGdQC9JmHKjbPdQmQ1R/Minifying-URL?node-id=0%3A1&t=JUnkQU7cgpLtjG9p-0)
+
 ###### Node.js Application
 This repository contains the source code for a Node.js application.
 
